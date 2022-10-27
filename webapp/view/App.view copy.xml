@@ -1,0 +1,170 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+  xmlns:f = "sap.f"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<!-- <Text
+    maxLines="4"
+    renderWhitespace="false"
+    text="Hello UI5 Again"
+    textAlign="End"
+    textDirection="Inherit"
+    width="50%"
+    wrapping="true"
+    wrappingType="Normal"
+>
+    
+</Text> -->
+
+<App
+    backgroundColor=""
+    backgroundImage=""
+    backgroundOpacity="1"
+    backgroundRepeat="false"
+    homeIcon=""
+    mobileWebAppCapable="true"
+>
+    <pages>
+      <Page
+          backgroundDesign="Solid"
+          contentOnlyBusy="false"
+          class="sapUiContentPadding"
+          enableScrolling="true"
+          floatingFooter="true"
+          navButtonTooltip="Back"
+          showFooter="true"
+          showHeader="true"
+          showNavButton="true"
+          showSubHeader="true"
+          title="{i18n>homePageTitle}"
+          titleLevel="Auto"
+      >
+
+      <headerContent>
+  			<Button icon="sap-icon://action" tooltip="Share" />
+
+
+      </headerContent>
+      
+          <content>
+
+
+              <Panel
+                  accessibleRole="Form"
+                  backgroundDesign="Translucent"
+                  expandAnimation="true"
+                  expandable="false"
+                  expanded="false"
+                  headerText="{i18n>helloPanelTitle}"
+                  height="auto"
+                  width="50%"
+              >
+                  <content>
+                      <Button
+    activeIcon=""
+    enabled="true"
+    icon=""
+    iconDensityAware="true"
+    iconFirst="true"
+    text="{i18n>showHelloButtonText}"
+    textDirection="Inherit"
+    type="Default"
+    width=""
+    press=".onShowHello"
+>
+
+    
+</Button>
+
+<Input
+    description="Hello {/recipient/name}"
+    enableSuggestionsHighlighting="true"
+    fieldWidth="50%"
+    filterSuggests="true"
+    maxLength="0"
+    maxSuggestionWidth=""
+    selectedKey="empty string"
+    showSuggestion="false"
+    showTableSuggestionValueHelp="true"
+    showValueHelp="false"
+    startSuggestion="1"
+    suggestionRowValidator="empty string"
+    textFormatMode="Value"
+    textFormatter="empty string"
+    type="Text"
+    valueHelpOnly="false"
+    valueLiveUpdate="true"
+    value = "{/recipient/name}"
+    width= "50%"
+>
+
+</Input>
+
+			
+
+
+<VBox justifyContent="Center" alignItems="Center"  height="300px"
+>
+    	
+				<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, set dolore magna aliquyam erat" />
+				<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, set dolore magna aliquyam erat" />
+			
+</VBox>
+                  </content>
+                  <headerToolbar>
+
+                  </headerToolbar>
+                  <infoToolbar >
+                                <OverflowToolbar>
+<Button
+                  activeIcon="sap-icon://accept"
+                  enabled="true"
+                  icon="sap-icon://accidental-leave"
+                  iconDensityAware="true"
+                  iconFirst="false"
+                  text="Press Me"
+                  textDirection="Inherit"
+                  type="Accept"
+                  width=""                
+              >
+              </Button>   
+            </OverflowToolbar>                 
+                  </infoToolbar>
+              </Panel>
+          </content>
+          <customHeader>
+          </customHeader>
+          <footer>
+            <OverflowToolbar>
+              <ToolbarSpacer width='50%'/>
+              <Button
+                  activeIcon="sap-icon://accept"
+                  enabled="true"
+                  icon="sap-icon://accidental-leave"
+                  iconDensityAware="true"
+                  iconFirst="false"
+                  text="Press Me"
+                  textDirection="Inherit"
+                  type="Accept"
+                  width=""                
+              >
+              </Button>
+              
+              </OverflowToolbar>
+          </footer>
+          <headerContent>
+          </headerContent>
+
+          <subHeader>
+          </subHeader>
+      </Page>
+    </pages>
+</App>
+
+
+</mvc:View>

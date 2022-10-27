@@ -1,0 +1,89 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	busyIndicatorDelay="0"
+>
+	<Panel
+		accessibleRole="Form"
+		backgroundDesign="Translucent"
+		expandAnimation="true"
+		expandable="false"
+		expanded="false"
+		class="sapUiResponsiveMargin"
+		headerText="{i18n>helloPanelTitle}"
+		height="auto"
+		width="auto"
+	>
+		<content>
+			<Button
+				activeIcon=""
+				enabled="true"
+				icon=""
+				iconDensityAware="true"
+				iconFirst="true"
+				text="{i18n>showHelloButtonText}"
+				textDirection="Inherit"
+				type="Default"
+				width="auto"
+				class="sapUiSmallMarginBeginEnd myCustomButton"
+				press=".onShowHello"
+			/>
+			<Input
+				description="Hello {/recipient/name}"
+				enableSuggestionsHighlighting="true"
+				fieldWidth="50%"
+				filterSuggests="true"
+				maxLength="0"
+				maxSuggestionWidth=""
+				selectedKey="empty string"
+				showSuggestion="false"
+				showTableSuggestionValueHelp="true"
+				showValueHelp="false"
+				startSuggestion="1"
+				suggestionRowValidator="empty string"
+				textFormatMode="Value"
+				textFormatter="empty string"
+				type="Text"
+				valueHelpOnly="false"
+				valueLiveUpdate="true"
+				value="{/recipient/name}"
+				width="50%"
+			/>
+			<Text
+				maxLines=""
+				renderWhitespace="false"
+				text="Hello {/recipient/name}"
+				textAlign="Begin"
+				textDirection="Inherit"
+				width=""
+				wrapping="true"
+				wrappingType="Normal"
+				class="sapUiSmallMargin"
+			/>
+			<FormattedText
+				convertLinksToAnchorTags="None"
+				convertedLinksDefaultTarget="_blank"
+				height=""
+				htmlText="empty string"
+				width=""
+				class="sapUiSmallMargin myCustomText sapThemeHighlight"
+			/>
+			<Button
+				activeIcon=""
+				enabled="true"
+				icon="sap-icon://world"
+				iconDensityAware="true"
+				iconFirst="true"
+				text="{i18n>openDialogButtonText}"
+				textDirection="Inherit"
+				type="Default"
+				width=""
+				press=".onOpenDialog"
+				class="sapUiSmallMargin"
+			/>
+		</content>
+	</Panel>
+</mvc:View>

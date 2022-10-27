@@ -1,0 +1,127 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<List
+		backgroundDesign="Solid"
+		headerText="Invoice List Title"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		items="{invoice>/Invoices}"
+		id="invoiceList"
+	>
+		<headerToolbar>
+			<Toolbar
+				active="false"
+				design="Auto"
+				enabled="true"
+				style="Standard"
+				width=""
+			>
+				<content>
+					<ToolbarSpacer/>
+					<SearchField
+						enableSuggestions="true"
+						enabled="true"
+						maxLength="0"
+						placeholder="Enter Item Description"
+						refreshButtonTooltip=""
+						showRefreshButton="false"
+						showSearchButton="true"
+						value=""
+						visible="true"
+						width="50%"
+						search="onFilterInvoices"
+					>
+						<suggestionItems>
+						</suggestionItems>
+					</SearchField>
+					<ToolbarSpacer width=""/>
+				</content>
+			</Toolbar>
+		</headerToolbar>
+		<items>
+			<ObjectListItem
+				activeIcon=""
+				icon=""
+				iconDensityAware="true"
+				intro="Intro for Object List Item"
+				introTextDirection="Inherit"
+				number="{
+					parts: [{
+						path: 'invoice>ExtendedPrice'
+					}, {
+						path: 'view>/currency'
+					}],
+					type: 'sap.ui.model.type.Currency',
+					formatOptions: {
+						showMeasure: false
+					}
+				}"
+				numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error': 'Success'}"
+				numberTextDirection="Inherit"
+				numberUnit="{view>/currency}"
+				title="{invoice>Quantity} x {invoice>ProductName}"
+				titleTextDirection="Inherit"
+			>
+				<attributes>
+					<ObjectAttribute
+						active="false"
+						text=""
+						textDirection="Inherit"
+						title="Shipper Name"
+					>
+						<customContent>
+							<Text
+								maxLines=""
+								renderWhitespace="false"
+								text="empty string"
+								textAlign="Begin"
+								textDirection="Inherit"
+								width=""
+								wrapping="true"
+								wrappingType="Normal"
+							/>
+						</customContent>
+					</ObjectAttribute>
+					<ObjectAttribute
+						active="false"
+						text="More Attributes"
+						textDirection="Inherit"
+						title="Title??"
+					>
+						<customContent>
+						</customContent>
+					</ObjectAttribute>
+				</attributes>
+				<firstStatus>
+					<ObjectStatus
+						active="false"
+						icon=""
+						iconDensityAware="true"
+						state="None"
+						text="{
+							path: 'invoice>Status',
+							formatter: '.formatter.statusText'
+						}"
+						textDirection="Inherit"
+						title=""
+					/>
+				</firstStatus>
+				<markers>
+					<ObjectMarker
+						type="Unsaved"
+						additionalInfo="Addition Info"
+					/>
+				</markers>
+				<secondStatus>
+				</secondStatus>
+			</ObjectListItem>
+		</items>
+	</List>
+</mvc:View>

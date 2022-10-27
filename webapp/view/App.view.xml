@@ -1,0 +1,70 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Shell
+		appWidthLimited="true"
+		backgroundColor=""
+		backgroundImage=""
+		backgroundOpacity="1"
+		backgroundRepeat="false"
+		headerRightText="Text Shell"
+		homeIcon=""
+		logo=""
+		showLogout="true"
+		title="Shell Title"
+		titleLevel="H1"
+	>
+		<App
+			backgroundColor=""
+			backgroundImage=""
+			backgroundOpacity="1"
+			backgroundRepeat="false"
+			homeIcon=""
+			mobileWebAppCapable="true"
+			class="myCustomApp"
+		>
+			<pages>
+				<Page
+					backgroundDesign="Solid"
+					contentOnlyBusy="false"
+					class=" sapUiContentPadding"
+					enableScrolling="true"
+					floatingFooter="true"
+					navButtonTooltip="Back"
+					showFooter="true"
+					showHeader="true"
+					showNavButton="true"
+					showSubHeader="true"
+					title="{i18n>homePageTitle}"
+					titleLevel="Auto"
+				>
+					<headerContent>
+						<Button
+							activeIcon=""
+							enabled="true"
+							icon="sap-icon://open-folder"
+							iconDensityAware="true"
+							iconFirst="true"
+							text="Open Hello Dialog"
+							textDirection="Inherit"
+							type="Default"
+							width=""
+							press=".onOpenDialog"
+						/>
+					</headerContent>
+					<content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

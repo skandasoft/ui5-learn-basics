@@ -1,0 +1,12 @@
+.myCustomApp .myCustomButton .sapMBtnInner {
+  color: yellow;
+  background-color: hotpink;
+}
+
+.myCustomApp .myCustomText {
+  color: cornflowerblue;
+  font-weight: 500;
+  font-size: xx-large;
+  background-color: lightcoral;
+  padding: 4px;
+}
